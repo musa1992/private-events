@@ -1,3 +1,16 @@
 <h1>event show page</h1>
 
-<p><%= @event.creator.username%></p>
+<p>event details</p>
+
+<%= @event.event_date %>
+
+<p>add guests</p>
+<%= form_with(url: invitations_path) do |form|%>
+    <% @guests.each do |guest|%>
+        <p> <%= guest.username%> </p>
+        <%= form.check_box("guest", {multiple: true}, guest.id,nil) %>
+    <% end %>
+    <%= form.submit "Send invites"%>
+    <%= form.hidden_field :event_id,   :value => @event.id%>
+<% end %>
+
