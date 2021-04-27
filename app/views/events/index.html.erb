@@ -1,6 +1,21 @@
-<h1>Event creators</h1>
+<main>
+    <div class="hero">
+        <div class="hero__content">
+            <h1>Bring everyone together.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo in qui illo commodi excepturi dolores, inventore ut corrupti ipsa magnam.</p>
+            <button>Create event</button>
+        </div>
+        <div class="hero__vector__img">
+           
+        </div>
+    </div>
 
-<%Event.all.each do |event| %>
-   <p> <%= event.creator.username%> </p>
-
-<%end%>
+    <div class="upcoming__events">
+        <h2>Upcoming events</h2>
+        <p>insert partials here through collections</p>
+    </div>
+    <div class="past__events">
+        <h2>Past events</h2>
+        <p>use partial too</p>
+    </div>
+</main>

@@ -4,6 +4,11 @@
 
 <%= @event.event_date %>
 
+<p>Attendes</p>
+<% @event.attendees.each do |attendee|%>
+    <p><%= attendee.username%></p>
+<% end %>
+
 <p>add guests</p>
 <%= form_with(url: invitations_path) do |form|%>
     <% @guests.each do |guest|%>

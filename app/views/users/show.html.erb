@@ -2,3 +2,9 @@
 <p>Find me in app/views/users/show.html.erb</p>
 
 <%= @user.username%>
+
+<p>Parties to attend</p>
+
+<% @user.attended_event.each do |party|%>
+    <p><%=party.creator.username%>, <%= party.event_date%></p>
+<% end %>
