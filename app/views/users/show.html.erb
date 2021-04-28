@@ -1,10 +1,24 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="user__profile">
+    <div class="user__events">
+        <div class="user__info">
+            <p>Events hosted: 10</p>
+            <p>Upcoming events</p>
+            <p>Invited events</p>
+        </div>
+        <div class="events__created">
+            <%= render 'user_event'%>
+        </div>
+    </div>
+    <div class="invited__events">
+        <div class="invited__events--upcoming">
+            <h2>Upcoming events</h2>
+            <%= render 'events/event'%>
+        </div>
+        <div class="invited__events--past">
+            <h2>Past events</h2>
+            <%= render 'events/event'%>
+        </div>
+    </div>
 
-<%= @user.username%>
+</div>
 
-<p>Parties to attend</p>
-
-<% @user.attended_event.each do |party|%>
-    <p><%=party.creator.username%>, <%= party.event_date%></p>
-<% end %>

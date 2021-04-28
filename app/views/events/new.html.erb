@@ -1,7 +1,19 @@
 <h1>Create your Event</h1>
 
 <%= form_with model: @event do |form|%>
+    <%= form.label "Title"%>
+    <%= form.text_field :event_date %>
+
+    <%= form.label "Description"%>
+    <%= form.text_area :event_date%>
+
     <%= form.label :event_date, "Date"%>
+    <%= form.text_field :event_date %>
+
+    <%= form.label "Time"%>
+    <%= form.text_field :event_date %>
+
+    <%= form.label "Venue"%>
     <%= form.text_field :event_date %>
     <%= form.submit "Create event"%>
 <% end %>

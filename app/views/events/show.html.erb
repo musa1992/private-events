@@ -1,21 +1,27 @@
-<h1>event show page</h1>
+<div>
+    <div class="event">
+        <p>Event title</p>
+        <p>event date</p>
+        <p>event location</p>
+        <p>event description</p>
 
-<p>event details</p>
+    </div>
+    <div class="guest__list">
+        <h2>guest list</h2>
+        <p>list the guest here</p>
+    </div>
+   <div class="add__guests">
+        <h2>Add gueste</h2>
+        <%= form_with(url: invitations_path) do |form|%>
+            <% @guests.each do |guest|%>
+                <p> <%= guest.username%> </p>
+                <%= form.check_box("guest", {multiple: true}, guest.id,nil) %>
+            <% end %>
+            <%= form.submit "Send invites"%>
+            <%= form.hidden_field :event_id,   :value => @event.id%>
+        <% end %>
+   </div>
+</div>
 
-<%= @event.event_date %>
 
-<p>Attendes</p>
-<% @event.attendees.each do |attendee|%>
-    <p><%= attendee.username%></p>
-<% end %>
-
-<p>add guests</p>
-<%= form_with(url: invitations_path) do |form|%>
-    <% @guests.each do |guest|%>
-        <p> <%= guest.username%> </p>
-        <%= form.check_box("guest", {multiple: true}, guest.id,nil) %>
-    <% end %>
-    <%= form.submit "Send invites"%>
-    <%= form.hidden_field :event_id,   :value => @event.id%>
-<% end %>
 
