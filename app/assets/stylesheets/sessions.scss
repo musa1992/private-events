@@ -2,3 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.sign_in {
+    display: flex;
+    justify-content: center;
+
+}
+.sign_in_wrapper {
+    // background-color: antiquewhite;
+    border-radius: 10px;
+    border: 0.5px lightgrey solid;
+    padding: 3rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0 ,0.5);
+}
+
+
+.btn--sign {
+    border: none;
+    display: block;
+}

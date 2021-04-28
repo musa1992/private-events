@@ -47,8 +47,16 @@
  .row {
      display: flex;
  }
+ .username {
+    display: block;
+    margin: 2rem 0;
+    padding: 0.6rem 0.7rem;
+}
 
- .btn {
+.title {
+    margin-bottom: 1.5rem;
+}
+.btn {
      padding: 0.6rem 2rem;
      border-radius: 25px;
      color: #FFF;
@@ -70,5 +78,6 @@
      margin-left: 2rem;
      align-self: center;
  }
+
 
 
