@@ -1,11 +1,17 @@
-<header>
-    <p>Logo</p>
-    <nav>
-        <ul>
-            <li>Host an event</li>
-            <li>Profile</li>
-            <li>Sign In</li>
-            <li>Sign Out</li>
+<header class="header container row">
+    <p class="logo"><%= link_to "Logo", events_path%></p>
+    <nav class="nav">
+        <ul class="nav__items row">
+            <li class="nav__link btn">Host an event</li>
+            <% if logged_in? %>
+            <li class="nav__link">Profile</li>
+            <% end %>
+
+            <li class="nav__link">Sign In</li>
+
+            <% if logged_in? %>
+            <li class="nav__link"><%= link_to "Sign Out", logout_path, method: :delete%></li>
+            <% end %>
         </ul>
     </nav>
 </header>
