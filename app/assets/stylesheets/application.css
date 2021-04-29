@@ -38,6 +38,10 @@
      text-decoration: none;
  }
 
+ img {
+     max-width: 100%;
+ }
+
  .container {
      width: 90%;
      max-width: 1200px;
@@ -59,12 +63,16 @@
 .btn {
      padding: 0.6rem 2rem;
      border-radius: 25px;
+     border: none;
      color: #FFF;
      background-color: #000;
+     cursor: pointer;
+
  }
  .header {
      justify-content: space-between;
      padding-top: 1.5rem;
+     margin-bottom: 50px;
  }
  .logo {
      align-self: center;

@@ -1,21 +1,23 @@
-<main>
-    <div class="hero">
-        <div class="hero__content">
-            <h1>Bring everyone together.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo in qui illo commodi excepturi dolores, inventore ut corrupti ipsa magnam.</p>
-            <button>Create event</button>
+<main class='main'>
+    <div class="main-wrapper container">
+        <div class="hero row">
+            <div class="hero__content">
+                <h1 class="title">Bring everyone together.</h1>
+                <p class="hero__content--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo in qui illo commodi excepturi dolores, inventore ut corrupti ipsa magnam.</p>
+                <button class="btn">Create event</button>
+            </div>
+            <div class="hero__vector__img">
+               <%= image_tag 'block party 1.svg'%>
+            </div>
         </div>
-        <div class="hero__vector__img">
-           
+    
+        <div class="upcoming__events">
+            <h2 class="title">Upcoming events</h2>
+            <%=render 'event'%>
         </div>
-    </div>
-
-    <div class="upcoming__events">
-        <h2>Upcoming events</h2>
-       <%=render 'event'%>
-    </div>
-    <div class="past__events">
-        <h2>Past events</h2>
-        <%= render 'event'%>
+        <div class="past__events">
+            <h2 class="title">Past events</h2>
+            <%= render 'event'%>
+        </div>
     </div>
 </main>

@@ -2,13 +2,13 @@
     <p class="logo"><%= link_to "Logo", events_path%></p>
     <nav class="nav">
         <ul class="nav__items row">
-            <li class="nav__link btn">Host an event</li>
+            <li class="nav__link btn"><%= link_to "Host an event", new_event_path%></li>
             <% if logged_in? %>
             <li class="nav__link">Profile</li>
             <% end %>
-
+            <% if !logged_in?%>
             <li class="nav__link">Sign In</li>
-
+            <% end %>
             <% if logged_in? %>
             <li class="nav__link"><%= link_to "Sign Out", logout_path, method: :delete%></li>
             <% end %>

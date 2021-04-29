@@ -1,3 +1,54 @@
 // Place all the styles related to the events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/** index page **/
+.hero {
+    margin-bottom: 5rem;
+}
+.hero__content {
+    align-self: center;
+    margin-right: 2rem;
+}
+
+.hero__content--text {
+    margin-bottom: 2rem;
+}
+
+.upcoming__events {
+    margin-bottom: 4rem;
+   
+}
+
+.event__card {
+    width: 300px;
+    height: 300px;
+    border: 0.5px lightgrey solid;
+    cursor: pointer;
+    &:hover {
+        box-shadow: 2px 2px 15px rgba(0, 0, 0 ,0.3);
+    }
+}
+
+.card__header {
+    border-bottom: 0.5px lightgrey solid;
+    
+}
+
+.event__info {
+    padding-top: 0.5rem;
+}
+
+.form-field {
+    display: block;
+    margin: 1rem 0;
+}
+
+.event__showpage {
+    justify-content: space-between;
+}
+
+.user__check p {
+    display: inline-block;
+    width: 15rem;
+}

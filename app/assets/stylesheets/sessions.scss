@@ -5,10 +5,9 @@
 .sign_in {
     display: flex;
     justify-content: center;
-
 }
 .sign_in_wrapper {
-    // background-color: antiquewhite;
+    width: 360px;
     border-radius: 10px;
     border: 0.5px lightgrey solid;
     padding: 3rem;
@@ -17,6 +16,5 @@
 
 
 .btn--sign {
-    border: none;
     display: block;
 }
