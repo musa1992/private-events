@@ -16,6 +16,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @events = @user.attended_event.all
+    @created_events = @user.events
   end
 
   private

@@ -4,7 +4,7 @@
             <div class="hero__content">
                 <h1 class="title">Bring everyone together.</h1>
                 <p class="hero__content--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo in qui illo commodi excepturi dolores, inventore ut corrupti ipsa magnam.</p>
-                <button class="btn">Create event</button>
+                <button class="btn"><%= link_to "Create event", new_event_path %></button>
             </div>
             <div class="hero__vector__img">
                <%= image_tag 'block party 1.svg'%>
@@ -13,11 +13,11 @@
     
         <div class="upcoming__events">
             <h2 class="title">Upcoming events</h2>
-            <%=render 'event'%>
+            <%=render partial:'event', collection: @events%>
         </div>
         <div class="past__events">
             <h2 class="title">Past events</h2>
-            <%= render 'event'%>
+
         </div>
     </div>
 </main>

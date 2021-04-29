@@ -2,16 +2,16 @@
     <h1 class="title">Create your Event</h1>
     <%= form_with model: @event do |form|%>
         <%= form.label "Title"%>
-        <%= form.text_field :event_date, class: "form-field"%>
+        <%= form.text_field :title, class: "form-field"%>
     
         <%= form.label "Description"%>
-        <%= form.text_area :event_date, class: "form-field"%>
+        <%= form.text_area :description, class: "form-field"%>
     
         <%= form.label :event_date, "Date"%>
         <%= form.text_field :event_date, class: "form-field" %>
     
         <%= form.label "Venue"%>
-        <%= form.text_field :event_date, class: "form-field" %>
+        <%= form.text_field :venue, class: "form-field" %>
         <%= form.submit "Create event", class: "btn"%>
     <% end %>
 </div>
