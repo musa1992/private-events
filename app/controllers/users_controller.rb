@@ -20,6 +20,10 @@ class UsersController < ApplicationController
     @created_events = @user.events
   end
 
+  def inbox
+    @messages = current_user.invitations.all
+  end
+
   private
 
   def user_params

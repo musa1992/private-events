@@ -4,9 +4,14 @@ class InvitationsController < ApplicationController
         event_id = params[:event_id]
         
         invited_guests.each do |guest|
-            msg = "Dear #{User.find(guest).username}, u have been invited to the party"
+            msg = "Dear #{User.find(guest).username}, you have received an invitation to #{Event.find(event_id).title}"
             Invitation.create(user_id: guest, event_id: event_id, message: msg)
         end
         redirect_to events_path
+    end
+
+    def update
+        @invitation = Invitation.find(params[:id])
+        @invitation.update_column(:status, params[:status])
     end
 end

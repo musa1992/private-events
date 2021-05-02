@@ -1,0 +1,11 @@
+<div class="container">
+    <%@messages.each do |msg|%>
+        <div class="message">
+            <p><%= Event.find(msg.event_id).creator.username%></p>
+            <p><%= msg.message%></p>
+            <%= link_to "Accept", invitation_path(msg, status: "accepted"),method: :patch, class: "btn"%>
+            <%= link_to "Decline",invitation_path(msg, status: "declined"),method: :patch, class: "decline"%>
+        </div>
+    <% end %>
+</div>
+
