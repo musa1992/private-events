@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-
+ @import "font-awesome";
  *, *::before, *::after {
      box-sizing: border-box;
  }
@@ -90,6 +90,30 @@
  .nav__link + .nav__link {
      margin-left: 2rem;
      align-self: center;
+ }
+
+ .message__icon {
+     position: relative;
+     display: flex;
+ }
+
+ .message__icon .fa {
+     font-size: 25px;
+ }
+
+ .msg_received {
+     position: absolute;
+     top: -10px;
+     right: -10px;
+     margin: 0;
+     padding-top: .2em;
+     width: 1.5em;
+     height: 1.5em;
+     border-radius: 50%;
+     text-align: center;
+     background-color: red;
+     color: black;
+     font-weight: bold;
  }
 
 
