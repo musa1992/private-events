@@ -8,7 +8,7 @@
             <% end %>
 
             <% if !logged_in?%>
-            <li class="nav__link">Sign In</li>
+            <li class="nav__link"><%= link_to "Sign In", new_session_path%></li>
             <% end %>
             <% if logged_in? %>
             <li class="nav__link"><%= link_to "Sign Out", logout_path, method: :delete%></li>

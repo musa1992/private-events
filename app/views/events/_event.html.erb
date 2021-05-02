@@ -1,9 +1,13 @@
 <div class="event__card">
     <div class="card__header">
-        <%= image_tag 'Untitled-6.svg'%>
+        <%= link_to event_path(event) do %>
+            <%= image_tag 'Untitled-6.svg'%>
+        <% end %>
     </div>
     <div class="event__info container">
-        <h3><%= event.title %></h3>
-        <P>Thu,May20,2021 10:00 p.m</P>
+        <%= link_to event_path(event) do%>
+            <h3><%=event.title %></h3>
+        <% end %>
+        <P><%= event.event_date.strftime(" %a, %b %d, %Y" )%></P>
     </div>
 </div>
