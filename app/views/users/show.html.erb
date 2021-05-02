@@ -1,22 +1,16 @@
 <div class="user__profile container row">
     <div class="user__events">
         <div class="user__info">
+            <p><%= current_user.username%></p>
             <p>Events hosted: <%= @created_events.all.count%></p>
             <p>Upcoming events</p>
             <p>Invited events</p>
         </div>
-        <div class="events__created">
-            <%= render partial: 'user_event', collection: @created_events%>
-        </div>
     </div>
-    <div class="invited__events row">
+    <div class="invited__events">
         <div class="invited__events--upcoming">
-            <h2>Upcoming events</h2>
+            <h2 class="title">Invited events</h2>
             <%= render partial: 'events/event', collection: @events%>
-        </div>
-        <div class="invited__events--past">
-            <h2>Past events</h2>
-            
         </div>
     </div>
 

@@ -2,12 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 /** profile page **/
-
-/*user event partial **/
-
-.user__event {
-    border: 2px black solid;
-    border-radius: 5px;
-    margin-bottom: 1rem;
+.invited__events {
+    background-color: rgb(42, 114, 165);
+    border-radius: 15px;
+    margin-left: 15rem;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+.user__events {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(42, 114, 165);
+    border-radius: 15px;
+    height: 40vh;
+    width: 20%;
 }
 

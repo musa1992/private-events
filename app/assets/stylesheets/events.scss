@@ -15,16 +15,34 @@
     margin-bottom: 2rem;
 }
 
+.fa-heart {
+    color: #FF6699;
+}
+.event-section {
+    background-color: rgb(42, 114, 165);
+    border-radius: 55px;
+    padding: 2em;
+}
+
 .upcoming__events {
     margin-bottom: 4rem;
+    
    
+}
+
+.upcoming__events--wrapper {
+    display: grid;
+    grid-column-gap: 5px;
+    grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
 }
 
 .event__card {
     width: 300px;
-    height: 300px;
-    border: 0.5px lightgrey solid;
+    height: 350px;
+    border-radius: 5px;
     cursor: pointer;
+    margin-bottom: 2rem;
+    background-color: whitesmoke;
     &:hover {
         box-shadow: 2px 2px 15px rgba(0, 0, 0 ,0.3);
     }
@@ -34,7 +52,15 @@
     border-bottom: 0.5px lightgrey solid;
     
 }
-
+.sub-title {
+    color: #3A4C9D;
+    margin: 0;
+}
+.event_date {
+    // color: #FF6699;
+    color: #F06131;
+    font-weight: bold;
+}
 .event__info {
     padding-top: 0.5rem;
 }
@@ -51,4 +77,13 @@
 .user__check p {
     display: inline-block;
     width: 15rem;
+}
+
+.guests {
+    border: 1px grey solid;
+    border-radius: 15px;
+    max-height: 400px;
+    overflow-y: scroll;
+    margin-bottom: 1rem;
+    padding: 1rem 2rem;
 }

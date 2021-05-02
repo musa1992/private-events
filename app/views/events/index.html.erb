@@ -2,7 +2,8 @@
     <div class="main-wrapper container">
         <div class="hero row">
             <div class="hero__content">
-                <h1 class="title">Bring everyone together.</h1>
+                <h1 class="title">Bring every<span class="heart"><i class="fa fa-heart"></i></span>ne t<span class="heart"><i class="fa fa-heart"></i></span>gether.</h1>
+                
                 <p class="hero__content--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo in qui illo commodi excepturi dolores, inventore ut corrupti ipsa magnam.</p>
                 <button class="btn"><%= link_to "Create event", new_event_path %></button>
             </div>
@@ -11,11 +12,13 @@
             </div>
         </div>
     
-        <div class="upcoming__events">
+        <div class="upcoming__events event-section">
             <h2 class="title">Upcoming events</h2>
-            <%=render partial:'event', collection: @events%>
+            <div class="upcoming__events--wrapper">
+                <%=render partial:'event', collection: @events%>
+            </div>  
         </div>
-        <div class="past__events">
+        <div class="past__events event-section">
             <h2 class="title">Past events</h2>
 
         </div>

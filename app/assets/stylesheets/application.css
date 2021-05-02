@@ -20,6 +20,9 @@
 
  body {
      margin: 0;
+     font-family: 'Roboto-condensed', sans-serif;
+     background-color: #1C7EC2;
+     
  }
  h1, h2, h3 {
      margin: 0;
@@ -60,13 +63,16 @@
 
 .title {
     margin-bottom: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    color: #EBBC2E;
 }
 .btn {
      padding: 0.6rem 2rem;
      border-radius: 25px;
      border: none;
      color: #FFF;
-     background-color: #000;
+     background-color: #FF6699;
      cursor: pointer;
 
  }
@@ -75,9 +81,13 @@
      color: #FFF;
  }
  .header {
-     justify-content: space-between;
-     padding-top: 1.5rem;
-     margin-bottom: 50px;
+     padding-top: 0.5rem;
+     margin-bottom: 30px;
+     background-color: rgb(42, 114, 165);
+ }
+ .header__wrapper {
+    justify-content: space-between;
+   
  }
  .logo {
      align-self: center;

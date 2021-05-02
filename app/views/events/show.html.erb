@@ -18,12 +18,14 @@
        <div class="add__guests">
             <h2>Create your guest list</h2>
             <%= form_with(url: invitations_path) do |form|%>
-                <% @guests.each do |guest|%>
-                    <div class="user__check row">
-                        <p> <%= guest.username%></p>
-                        <%= form.check_box("guest", {multiple: true}, guest.id,nil) %>
-                    </div>
-                <% end %>
+                <div class="guests">
+                    <% @guests.each do |guest|%>
+                        <div class="user__check row">
+                            <p> <%= guest.username%></p>
+                            <%= form.check_box("guest", {multiple: true}, guest.id,nil) %>
+                        </div>
+                    <% end %>
+                </div>
                 <%= form.submit "Send invites", class: "btn"%>
                 <%= form.hidden_field :event_id,   :value => @event.id%>
             <% end %>

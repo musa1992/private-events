@@ -6,8 +6,11 @@
     </div>
     <div class="event__info container">
         <%= link_to event_path(event) do%>
-            <h3><%=event.title %></h3>
+            <h4 class="sub-title"><%=event.title %></h4>
         <% end %>
-        <P><%= event.event_date.strftime(" %a, %b %d, %Y" )%></P>
+        <P class="event_date"><%= event.event_date.strftime(" %a, %b %d, %Y" )%></P>
+        <p>Venue <i class="fa fa-map-marker" aria-hidden="true"></i>: <%= event.venue%></p>
+        
+
     </div>
 </div>

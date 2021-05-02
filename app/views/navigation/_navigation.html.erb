@@ -1,23 +1,25 @@
-<header class="header container row">
-    <p class="logo"><%= link_to "Logo", events_path%></p>
-    <nav class="nav">
-        <ul class="nav__items row">
-            <li class="nav__link btn"><%= link_to "Host an event", new_event_path%></li>
-            <% if logged_in? %>
-            <li class="nav__link"><%= link_to "Profile", user_path(current_user) %></li>
-            <div class="message__icon nav__link">
-                <li><i class="fa fa-envelope"></i></li>
-                <small class="msg_received">2</small>
-            </div>
-           
-            <% end %>
-
-            <% if !logged_in?%>
-            <li class="nav__link"><%= link_to "Sign In", new_session_path%></li>
-            <% end %>
-            <% if logged_in? %>
-            <li class="nav__link"><%= link_to "Sign Out", logout_path, method: :delete%></li>
-            <% end %>
-        </ul>
-    </nav>
+<header class="header">
+    <div class="header__wrapper container row">
+        <p class="logo"><%= link_to "Logo", events_path%></p>
+        <nav class="nav">
+            <ul class="nav__items row">
+                <li class="nav__link btn"><%= link_to "Host an event", new_event_path%></li>
+                <% if logged_in? %>
+                <li class="nav__link"><%= link_to "Profile", user_path(current_user) %></li>
+                <div class="message__icon nav__link">
+                    <li><i class="fa fa-envelope"></i></li>
+                    <small class="msg_received">2</small>
+                </div>
+               
+                <% end %>
+    
+                <% if !logged_in?%>
+                <li class="nav__link"><%= link_to "Sign In", new_session_path%></li>
+                <% end %>
+                <% if logged_in? %>
+                <li class="nav__link"><%= link_to "Sign Out", logout_path, method: :delete%></li>
+                <% end %>
+            </ul>
+        </nav>
+    </div>
 </header>
