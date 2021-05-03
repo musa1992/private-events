@@ -4,7 +4,7 @@
             <p><%= current_user.username%></p>
             <p>Events hosted: <%= @created_events.all.count%></p>
             <p>Upcoming events</p>
-            <p>Invited events</p>
+            <p>Invited events: <%= current_user.invitations.count%></p>
         </div>
     </div>
     <div class="invited__events">
