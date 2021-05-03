@@ -14,5 +14,10 @@ class InvitationsController < ApplicationController
     def update
         @invitation = Invitation.find(params[:id])
         @invitation.update_column(:status, params[:status])
+        if params[:status] == "accepted"
+            redirect_to event_path(@invitation.event_id)
+        else
+            redirect_to events_path
+        end
     end
 end
