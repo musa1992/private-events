@@ -14,4 +14,10 @@ class Event < ApplicationRecord
         end
         confirmed_guests
     end
+
+    def users_without_invites(event_id)
+        event = Event.find(event_id)
+        no_invites = User.all.to_a - event.attendees.to_a
+        no_invites - [event.creator]
+    end
 end

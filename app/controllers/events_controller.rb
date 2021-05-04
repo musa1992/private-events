@@ -19,7 +19,7 @@ class EventsController < ApplicationController
 
     def show
         @event = Event.find(params[:id])
-        @guests = User.all
+        @guests = @event.users_without_invites(params[:id])
         @confirmed_guests = @event.confirmed_attendees(@event.id)
     end
 
