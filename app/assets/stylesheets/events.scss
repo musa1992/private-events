@@ -1,7 +1,7 @@
 // Place all the styles related to the events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+@import "font-awesome";
 /** index page **/
 .hero {
     margin-bottom: 5rem;
@@ -25,9 +25,7 @@
 }
 
 .upcoming__events {
-    margin-bottom: 4rem;
-    
-   
+    margin-bottom: 4rem;   
 }
 
 .upcoming__events--wrapper {
@@ -74,6 +72,42 @@
     justify-content: space-between;
 }
 
+.event__hero{
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.event__hero--img {
+    width: 60%;
+}
+.event__hero--sidebar {
+    background-color:  rgb(42, 114, 165);
+    width: 30%;
+    padding: 0 2rem;
+    color: white;
+}
+.date {
+    margin-bottom: 3rem;
+}
+.date p {
+    line-height: .5;
+}
+
+.event__description {
+    display: flex;
+    color:lightgrey;
+    border-bottom: 1px lightgrey solid;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+}
+.description {
+    width: 60%;
+}
+.event__description--sidebar {
+    padding: 0 2rem;
+}
+
+
 .user__check p {
     display: inline-block;
     width: 15rem;
@@ -86,4 +120,8 @@
     overflow-y: scroll;
     margin-bottom: 1rem;
     padding: 1rem 2rem;
+}
+
+.guest__list {
+    color: lightgrey;
 }

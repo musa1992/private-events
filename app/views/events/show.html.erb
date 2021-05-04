@@ -1,13 +1,31 @@
 <div class="container row event__showpage">
     <div class="event__details">
-        <div class="event">
-            <p>Event title</p>
-            <p>event date</p>
-            <p>event location</p>
-            <p>event description</p>
-            <p>Invites sent</p>
-            <p>Confirmed attendance</p>
-    
+        <div class="event"> 
+            <div class="event__hero">
+                <div class="event__hero--img">
+                    <%= image_tag "block party 1.svg"%>
+                </div>
+                <div class='event__hero--sidebar'>
+                    <div class="date">
+                        <p><%= @event.event_date.strftime("%b")%></p>
+                        <P><%= @event.event_date.strftime("%d")%></P>
+                    </div>
+                    <h4 class="title"><%= @event.title%></h4>
+                    <small>by <%= @event.creator.username%></small>
+                </div>
+            </div>
+            <div class="event__description">
+                <div class="description">
+                    <h3 class="title">About this event</h3>
+                    <p><%= @event.description%></p>
+                </div>
+                <div class="event__description--sidebar">
+                    <h4>Date and time</h4>
+                    <p class="date"><%= @event.event_date.strftime(" %a, %b %d, %Y" )%></p>
+                    <p>Location</p>
+                    <h4><%= @event.venue%></h4>
+                </div>
+            </div>
         </div>
         <div class="guest__list">
 
@@ -20,7 +38,7 @@
     <% if logged_in? && @event.creator.id == current_user.id%>
     <div class="create__guestlist"> 
        <div class="add__guests">
-            <h2>Create your guest list</h2>
+            <h2 class="title">Create your guest list</h2>
             <%= form_with(url: invitations_path) do |form|%>
                 <div class="guests">
                     <% @guests.each do |guest|%>
