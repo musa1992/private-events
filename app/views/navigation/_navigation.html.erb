@@ -8,7 +8,7 @@
                 <li class="nav__link"><%= link_to "Profile", user_path(current_user) %></li>
                 <div class="message__icon nav__link">
                     <%= link_to inbox_path do %>
-                    <li><i class="fa fa-envelope"></i></li>
+                    <%= image_tag 'envelope.svg'%>
                     <small class="msg_received"><%= current_user.invitations.count%></small>
                     <% end %>
                 </div>

@@ -107,8 +107,9 @@
      display: flex;
  }
 
- .message__icon .fa {
-     font-size: 25px;
+ .message__icon img {
+     width: 28px;
+    
  }
 
  .msg_received {

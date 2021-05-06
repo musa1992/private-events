@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     if @user.save
       log_in @user
       flash[:success] = "Welcome to EventSter"
-      redirect_to @user
+      redirect_to events_path
     else
       render 'new'
     end
