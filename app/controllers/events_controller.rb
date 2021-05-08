@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+    before_action :require_login, only: [:new]
     def index
         @events = Event.all
     end
@@ -10,7 +11,7 @@ class EventsController < ApplicationController
     def create
         @event = current_user.events.build(event_params)
         if @event.save
-            flash[:success] = "Event successfully created"
+            flash[:notice] = "Event successfully created"
             redirect_to @event
         else
             render 'new'

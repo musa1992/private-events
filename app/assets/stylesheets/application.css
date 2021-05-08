@@ -128,4 +128,18 @@
  }
 
 
+ .notice__message {
+     padding: 1em;
+     color: white;
+ }
+.notice {
+    background-color:#1CC2B3;
+}
+
+.reject {
+    background-color: #DD4322;
+}
+ 
+
+
 

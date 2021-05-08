@@ -1,0 +1,10 @@
+
+<div id = "flash-message">
+    <div class="notice_wrapper container">
+        <% flash.each do |key, value|%>
+            <div class="notice__message <%= key%>">
+                <%= value %>
+            </div>
+        <% end %>
+    </div>
+</div>

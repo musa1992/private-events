@@ -15,5 +15,9 @@ module SessionsHelper
     def logged_in?
         !current_user.nil?
     end
+
+    def require_login
+        redirect_to new_session_path if current_user.nil?
+    end
     
 end
