@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       flash[:notice] = "You successfully signed in"
       redirect_to events_path 
     else
-      
+      flash.now[:error] = "Enter correct username / Sign up if you do not have an account"
       render 'new'
     end
   end

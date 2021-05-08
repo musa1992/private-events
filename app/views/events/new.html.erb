@@ -1,6 +1,15 @@
 <div class="container">
+    <% if @event.errors.any? %>
+        <p><%= pluralize(@event.errors.count, "Error")%> prevented this event from being created</p>
+
+        <ul>
+            <% @event.errors.full_messages.each do |msg|%>
+            <li><%= msg%></li>
+            <% end %>
+        </ul>
+    <% end %>
     <h1 class="title">Create your Event</h1>
-    <%= form_with model: @event do |form|%>
+    <%= form_with model: @event, local: true do |form|%>
         <%= form.label "Title"%>
         <%= form.text_field :title, class: "form-field"%>
     

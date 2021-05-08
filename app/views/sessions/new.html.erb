@@ -2,7 +2,7 @@
     <div class="sign_in_wrapper">
         <h1 class="title">Sign In</h1>
         <div class="sign_in_form">
-            <%= form_with(url: sessions_path) do |form|%>
+            <%= form_with(url: sessions_path, local: true) do |form|%>
                 <div class="form_elements">
                     <%= form.label :username, "Username"%>
                     <%= form.text_field :username, class: "username" %>

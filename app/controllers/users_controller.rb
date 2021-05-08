@@ -7,10 +7,10 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       log_in @user
-      flash[:success] = "Welcome to EventSter"
+      flash[:notice] = "Welcome to EventSter"
       redirect_to events_path
     else
-      render 'new'
+      render :new
     end
   end
 

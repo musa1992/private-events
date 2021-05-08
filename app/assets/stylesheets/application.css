@@ -46,6 +46,18 @@
      max-width: 100%;
  }
 
+ /* .field_with_errors {
+    border: .5px solid #DD4322;
+ } */
+
+ .error-form {
+     color: white;
+     
+ }
+ .error-asterix {
+     color: red;
+ }
+
  .container {
      width: 90%;
      max-width: 1200px;
@@ -137,6 +149,10 @@
 }
 
 .reject {
+    background-color: #DD4322;
+}
+
+.error {
     background-color: #DD4322;
 }
  
