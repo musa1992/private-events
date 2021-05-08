@@ -5,11 +5,16 @@
 .invited__events {
     background-color: rgb(42, 114, 165);
     border-radius: 15px;
-    margin-left: 15rem;
+    margin-left: 5rem;
     width: 50%;
     display: flex;
     justify-content: center;
     padding-top: 2rem;
+}
+
+.upcoming__events--user {
+    width: 70%;
+    margin-left: 3rem;
 }
 .user__events {
     display: flex;

@@ -5,6 +5,9 @@ class Event < ApplicationRecord
 
     validates :event_date, :title, :description, :venue, presence: true
 
+    scope :upcoming_events, -> {where('event_date >= ?', Date.today)}
+    scope :past_events, -> {where('event_date < ?', Date.today)}
+
     def confirmed_attendees(event_id)
         @event = Event.find(event_id)
         confirmed_guests = []

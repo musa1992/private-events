@@ -18,6 +18,9 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @events = @user.attended_event.all
     @created_events = @user.events
+    @user_upcoming_events = @created_events.upcoming_events
+    @upcoming_invited = @user.attended_event.upcoming_events
+    @attended_events = @user.attended_event.past_events
   end
 
   def inbox

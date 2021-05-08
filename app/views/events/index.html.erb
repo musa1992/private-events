@@ -15,12 +15,14 @@
         <div class="upcoming__events event-section">
             <h2 class="title">Upcoming events</h2>
             <div class="upcoming__events--wrapper">
-                <%=render partial:'event', collection: @events%>
+                <%=render partial:'event', collection: @upcoming_events%>
             </div>  
         </div>
         <div class="past__events event-section">
             <h2 class="title">Past events</h2>
-
+            <div class="upcoming__events--wrapper">
+                <%=render partial:'event', collection: @past_events%>
+            </div> 
         </div>
     </div>
 </main>
