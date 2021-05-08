@@ -16,7 +16,7 @@ class InvitationsController < ApplicationController
         @invitation = Invitation.find(params[:id])
         @invitation.update_column(:status, params[:status])
         if params[:status] == "accepted"
-            flash[:notice] = "You accepted the invite to #{Event.find(@invitation.event_id).creator.username}\'s party"
+            flash[:notice] = "You accepted the invite to #{Event.find(@invitation.event_id).creator.username}\'s party. Invite more of your friends, check create guest list tab"
             redirect_to event_path(@invitation.event_id)
         else
             flash[:reject] = "You rejected the invite to #{Event.find(@invitation.event_id).creator.username}\'s party"

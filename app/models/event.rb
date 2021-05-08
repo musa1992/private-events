@@ -23,4 +23,6 @@ class Event < ApplicationRecord
         no_invites = User.all.to_a - event.attendees.to_a
         no_invites - [event.creator]
     end
+
+    
 end

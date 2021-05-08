@@ -11,7 +11,7 @@
                         <P><%= @event.event_date.strftime("%d")%></P>
                     </div>
                     <h4 class="title"><%= @event.title%></h4>
-                    <small>by <%= @event.creator.username%></small>
+                    <small>by <%= link_to @event.creator.username, user_path(@event.creator),  class: "profile_link"%></small>
                 </div>
             </div>
             <div class="event__description">
@@ -28,14 +28,15 @@
             </div>
         </div>
         <div class="guest__list">
-
+            <small>Only guests with invites will appear here, check inbox and accept invitation</small>
             <h2 class="title">Guest list</h2>
+            
                <% @confirmed_guests.each do |guest|%>
                     <p><%= guest.username%></p>
                <% end %>
         </div>
     </div>
-    <% if logged_in? && @event.creator.id == current_user.id%>
+    <% if logged_in? && (current_user.has_invite(@event) || @event.creator.id == current_user.id) %>
     <div class="create__guestlist"> 
        <div class="add__guests">
             <h2 class="title">Create your guest list</h2>
@@ -49,12 +50,13 @@
                     <% end %>
                 </div>
                 <%= form.submit "Send invites", class: "btn"%>
-                <%= form.hidden_field :event_id,   :value => @event.id%>
+                <%= form.hidden_field :event_id, :value => @event.id%>
             <% end %>
        </div>
     </div>
     <% end %>
 </div>
+
 
 
 

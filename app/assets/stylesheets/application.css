@@ -46,6 +46,12 @@
      max-width: 100%;
  }
 
+ .profile_link {
+     color: white;
+     padding-bottom: 0.2rem;
+     border-bottom: 2px solid wheat;
+ }
+
  /* .field_with_errors {
     border: .5px solid #DD4322;
  } */
